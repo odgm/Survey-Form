@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+	<title>Survey Form</title>
+</head>
+<body>
+	<header class="header">
+		<h1 id="title">My Hero Academia Fan Club</h1>
+		<p id="description">Join us in the biggets fandom of the series</p>
+	</header>
+	
+	<form action="" id="survey-form">
+		<div class="form-group" id="personal-info"> <!-- Personal Information -->
+			<label for="name" id="name-label">Name</label><br>
+			<input type="text" id="name" class="form-control" placeholder="Enter your name" required><br>
+			<label for="email" id="email-label">E-mail</label><br>
+			<input type="email" id="email" name="email" class="form-control" placeholder="Enter your e-mail" pattern="(?!(^[.-].*|[^@]*[.-]@|.*\.{2,}.*)|^.{254}.)([a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@)(?!-.*|.*-\.)([a-zA-Z0-9-]{1,63}\.)+[a-zA-Z]{2,15}" required><br>
+			<label for="Age" id="number-label">Age</label><br>
+			<input type="number" id="number" name="age" min="10"
+        max="99" class="form-control" placeholder="Age"><br>
+		</div>
+	    <div class="form-group" id="continent"> <!-- Dropdown -->
+	    	<p class="div-title">What continent are you from?</p>
+	      <label for="continent">
+	        <select name="continent" id="dropdown" class="form-control">
+	          <option value="Africa">Africa</option>
+	          <option value="America">America</option>
+	          <option value="Asia">Asia</option>
+	          <option value="Europe">Europe</option>
+	          <option value="Oceania">Oceania</option>
+	        </select>
+	      </label>
+	    </div>
+		<div class="form-group" id="media"> <!-- Radio Buttoms -->
+			<p class="div-title">Do you read manga or watch anime?</p>
+			<label for="manga">
+				<input type="radio" id="manga" name="manga-anime-both" value="manga">
+				Manga
+			</label><br>
+			<label for="manga">
+				<input type="radio" id="anime" name="manga-anime-both" value="anime">
+				Anime
+			</label><br>
+			<label for="manga">
+				<input type="radio" id="both" name="manga-anime-both" value="both">
+				Both
+			</label><br>
+		</div>
+		<div class="form-group" id="activities"> <!-- Checkboxes -->
+			<p class="div-title">What would you like to get with us?</p><p class="text-checkbox">(Check all that apply)</p>
+			<label for="news"><input type="checkbox" value="news">Receive the latest news from the series</label><br>
+			<label for="friends"><input type="checkbox" value="friends">Meet more people from de fandom</label><br>
+			<label for="merchandise"><input type="checkbox" value="merchandise">Get exclusive merchandise</label><br>
+			<label for="events"><input type="checkbox" value="events">Participate in the events</label><br>
+		</div>
+		<div class="form-group" id="suggestions"> <!-- Comments -->
+			<p class="div-title">Any comments or suggestions?</p>
+			<textarea name="" id="comments" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+		</div>
+		<div class="form-group">
+			<button type="submit" id="submit">
+				 Submit
+			</button>
+		</div>
+	</form>
+</body>
+</html>
